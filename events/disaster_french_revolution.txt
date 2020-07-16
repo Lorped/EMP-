@@ -1032,8 +1032,8 @@ country_event = {
 			}
 		}
 		define_ruler = {
-			name = "Napol�on"
-			dynasy = "Bonaparte"
+			name = "Napol�on"                 #EMP+ No more "Napoleon Bonaparte Smith"
+			dynasty = "Bonaparte"             #EMP+ No more "Napoleon Bonaparte Smith"
 			adm = 6
 			dip = 5
 			mil = 6
