@@ -992,7 +992,7 @@ country_event = {
 }
 
 
-# Napolï¿½on Bonaparte
+# Napoléon Bonaparte
 country_event = {
 	id = french_revolution.7
 	title = "flavor_fra.EVTNAME3148"
@@ -1032,7 +1032,7 @@ country_event = {
 			}
 		}
 		define_ruler = {
-			name = "Napolï¿½on"                 #EMP+ No more "Napoleon Bonaparte Smith"
+			name = "Napoléon"                 #EMP+ No more "Napoleon Bonaparte Smith"
 			dynasty = "Bonaparte"             #EMP+ No more "Napoleon Bonaparte Smith"
 			adm = 6
 			dip = 5
@@ -1085,7 +1085,7 @@ country_event = {
 					spawn_rebels = {
 						size = 3
 						type = pretender_rebels
-						leader = "Napolï¿½on"
+						leader = "Napoléon"
 						leader_dynasty = "Bonaparte"
 						win = yes
 					}
@@ -1100,7 +1100,7 @@ country_event = {
 					spawn_rebels = {
 						size = 3
 						type = pretender_rebels
-						leader = "Napolï¿½on"
+						leader = "Napoléon"
 						leader_dynasty = "Bonaparte"
 						win = yes
 					}
@@ -1117,7 +1117,7 @@ country_event = {
 				spawn_rebels = {
 					size = 3
 					type = pretender_rebels
-					leader = "Napolï¿½on"
+					leader = "Napoléon"
 					leader_dynasty = "Bonaparte"
 					win = yes
 				}
