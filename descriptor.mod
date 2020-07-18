@@ -6,6 +6,7 @@ tags={
 	"Missions And Decisions"
 }
 name="Emperor Plus"
-picture="EmperorPlus.jpg"
+picture="thumbnail.jpg"
 supported_version="1.30.*.*"
-path="/Volumes/Devel/Empplus/"
+path="/home/lorenzo/Paradox/EU4/localfiles/mod/EMPplus"
+remote_file_id="2170563728"

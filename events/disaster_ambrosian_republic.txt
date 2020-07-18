@@ -410,7 +410,7 @@ country_event = {
 			DIP = 5
 			MIL = 5
 			fixed = yes
-			age = 48
+			age = 48                      #EMP+ (in 1489 he wa 48.. )
 		}
 	}
 	option = { # we don't need him
@@ -473,7 +473,7 @@ country_event = {
 		add_government_reform = feudalism_reform
 		add_legitimacy = 50
 
-		define_ruler = {
+		define_ruler = {                     #EMP+  No longer "Francesco Sforza Sforza..."
 			name = "Francesco"
 			dynasty = "Sforza"
 			ADM = 5

@@ -12,6 +12,7 @@ country_event = {
     is_at_war = no
     num_of_hired_mercenary_companies = 1
     num_of_loans = 1
+		ai = yes
 	}
 
 	mean_time_to_happen = {

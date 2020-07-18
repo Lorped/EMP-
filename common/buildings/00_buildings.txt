@@ -177,7 +177,7 @@ coastal_defence = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 0.5
 	}
 }
 
@@ -212,7 +212,7 @@ dock = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 0.5
+			factor = 0.5  #EMP+   was 1
 		}
 	}
 }
@@ -296,7 +296,7 @@ fort_16th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		factor = 1.5  #Lots of logic in code instead, that multiplies with this value   #EMP+   was 1
 	}
 }
 
@@ -315,7 +315,7 @@ naval_battery = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 0.5   #EMP+   was 1
 	}
 }
 
@@ -500,7 +500,7 @@ fort_17th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		factor = 1.5  #Lots of logic in code instead, that multiplies with this value   #EMP+   was 1
 	}
 }
 
@@ -667,7 +667,7 @@ fort_18th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		factor = 1.5  #Lots of logic in code instead, that multiplies with this value   #EMP+   was 1
 	}
 }
 
@@ -928,7 +928,7 @@ mills = {
 					trade_goods = gems
 					trade_goods = tropical_wood
 					trade_goods = glass
-					trade_goods = chinaware													
+					trade_goods = chinaware
 				}
 			}
 		}
