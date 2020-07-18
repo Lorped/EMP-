@@ -1,0 +1,6 @@
+﻿l_english:
+   #Events
+   nomercs.1.t:0 "Mercenaries are too expensive"
+   nomercs.1.d:0 "Our finances are in a very bad shape, we cannot afford to keep a running mercenary company at peacetime"
+   nomercs.1.a:0 "So long, and thanks for all the fish"
+   nomercs.1.b:0 "No, we will need them in a near future"

@@ -3,6 +3,9 @@
 ###  Pennsylvania -> delaware_area + maryland_area
 ###  Carolina -> carolinas_area + south_carolina_area
 ###  New England -> massachusetts_bay_area + connecticut_valley_area
+###  Hudson Bay -> hudson_bay_area + james_bay_area
+###  Quebec -> upper_ontario_area + lower_canada_area + upper_canada_area
+
 
 eng_british_conquest = {
 
@@ -878,7 +881,7 @@ eng_exploration_americas_group_b = {
 		required_missions = { english_newfoundland_colony }
 
 		provinces_to_highlight = {
-			colonial_region = colonial_hudson_bay  ############TODO
+			area = hudson_bay_area
 			has_discovered = ROOT
 		}
 
@@ -900,7 +903,7 @@ eng_exploration_americas_group_b = {
 				}
 			}
 			else = {
-				colonial_hudson_bay = { has_discovered = ROOT }
+				hudson_bay_area = { has_discovered = ROOT }
 			}
 		}
 
@@ -940,7 +943,7 @@ eng_exploration_americas_group_b = {
 				}
 			}
 
-			colonial_hudson_bay = {
+			hudson_bay_area = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -959,7 +962,10 @@ eng_exploration_americas_group_b = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
-				colonial_region = colonial_hudson_bay
+				OR = {
+					area = hudson_bay_area
+					area = james_bay_area
+				}
 				is_city = yes
 			}
 		}
@@ -972,8 +978,9 @@ eng_exploration_americas_group_b = {
 			custom_tooltip = english_hudson_colony_tt
 			hidden_effect = {
 				every_province = {
-					limit = {
-						colonial_region = colonial_hudson_bay
+					OR = {
+						area = hudson_bay_area
+						area = james_bay_area
 					}
 					if = {
 						limit = { is_empty = yes }
@@ -1005,7 +1012,21 @@ eng_exploration_americas_group_b = {
 				}
 				add_permanent_claim = ROOT
 			}
-			colonial_quebec = {
+			upper_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_canada_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_canada_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
