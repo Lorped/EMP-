@@ -4,3 +4,16 @@
    nomercs.1.d:0 "Our finances are in a very bad shape, we cannot afford to keep a running mercenary company at peacetime"
    nomercs.1.a:0 "So long, and thanks for all the fish"
    nomercs.1.b:0 "No, we will need them in a near future"
+
+  #tooltip
+  empplus_miss_colonize_eastern_america:0 "§Y[Root.GetName]§! or their subjects own at least three fully colonized provinces in the Chesapeake or Maryland areas."
+  english_virginia_colony_title:0 "Colonize Virginia"
+  english_virginia_colony_desc:0 "Virginia lands are fertile and hospitable. Too bad for the presence of the natives."
+  empplus_miss_english_virginia_colony:0 "§Y[Root.GetName]§! or their subjects own at least six fully colonized provinces in the Chesapeake or Great Valley areas."
+  english_new_england_colony_title:0 "Colonize New England"
+  english_new_england_colony_desc:0 "Our expansion on the American coasts must continue, so that we can subsequently expand inland."
+  empplus_miss_english_new_england_colony:0 "§Y[Root.GetName]§! or their subjects own at least six fully colonized provinces in the Delaware, Hudson Valley, Connecticut or Massachusetts areas."
+
+  eng_newfoundland_colony_title:0 "Colonize Newfoundland"
+  eng_newfoundland_colony_desc:0 "The island of Newfoundland will be a solid base for our fishermen and for exploring the northern lands."
+  empplus_miss_eng_newfoundland_colony:0 "§Y[Root.GetName]§! or their subjects own at least one fully colonized provinces in the Newfoundland area."

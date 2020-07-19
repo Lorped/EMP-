@@ -410,7 +410,6 @@ country_event = {
 			DIP = 5
 			MIL = 5
 			fixed = yes
-			age = 48                      #EMP+ (in 1489 he wa 48.. )
 		}
 	}
 	option = { # we don't need him
