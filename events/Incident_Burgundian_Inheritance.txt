@@ -287,7 +287,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 20                #EMP+ was 10
+			factor = 30                #EMP+ was 10
 			modifier = {
 				factor = 2
 				has_opinion = {
@@ -1013,7 +1013,7 @@ country_event = {
 		}
 		custom_tooltip = bur_france_gets_france_tt
 		ai_chance = {
-			factor = 10
+			factor = 50
 			modifier = {    #EMP+ They don't want to stay with us
 				factor = 2
 				BUR = {
@@ -1043,15 +1043,6 @@ country_event = {
 					value = 100
 				}
 			}
-			modifier = {          #EMP+ I hate France
-				factor = 0.1
-				NOT = {
-					has_opinion = {
-						who = FRA
-						value = -100
-					}
-				}
-			}
 		}
 		hidden_effect = {
 			every_province = {
@@ -1074,7 +1065,7 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 10
+				factor = 5
 				BUR = {
 					liberty_desire = 50
 				}
