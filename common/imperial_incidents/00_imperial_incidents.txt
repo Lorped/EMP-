@@ -3,7 +3,7 @@
 
 incident_burgundian_succ_emp = {
     event = incidents_bur_inheritance.2
-	default_option = 0
+	default_option = 1
 
 	can_stop = {
 		NOT = {
@@ -13,14 +13,63 @@ incident_burgundian_succ_emp = {
 
 	0 = {
 		factor = 1
+    modifier = {
+      factor = 2
+      ai_attitude = {
+        who = emperor
+        attitude = attitude_allied
+      }
+    }
 	}
 
 	1 = {
-		factor = 1
+		factor = 10
+    modifier = {
+			factor = 100
+      OR = {
+        ai_attitude = {
+          who = FRA
+          attitude = attitude_friendly
+        }
+        ai_attitude = {
+          who = FRA
+          attitude = attitude_neutral
+        }
+        ai_attitude = {
+          who = emperor
+          attitude = attitude_rivalry
+        }
+        ai_attitude = {
+          who = emperor
+          attitude = attitude_hostile
+        }
+        ai_attitude = {
+          who = emperor
+          attitude = attitude_threatened
+        }
+      }
+	  }
 	}
 
 	2 = {
 		factor = 1
+    modifier = {
+      factor = 10
+      OR = {
+        ai_attitude = {
+          who = emperor
+          attitude = attitude_rivalry
+        }
+        ai_attitude = {
+          who = emperor
+          attitude = attitude_hostile
+        }
+        ai_attitude = {
+          who = emperor
+          attitude = attitude_threatened
+        }
+      }
+    }
 	}
 }
 
@@ -63,7 +112,7 @@ incident_burgundian_succ_alone = {
 
 	1 = {
 		factor = 1
-	}
+  }
 
 	2 = {
 		factor = 1

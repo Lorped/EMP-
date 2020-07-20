@@ -5,14 +5,14 @@ eng_british_naval_conq = {
 	ai = yes
 
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -59,14 +59,14 @@ eng_rb_gibraltar = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -125,14 +125,14 @@ eng_rb_islands_med = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -223,14 +223,14 @@ eng_rb_egypt = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -317,14 +317,14 @@ eng_rb_stability = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -409,14 +409,14 @@ eng_rb_burgundy = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -490,44 +490,114 @@ gbr_rb_canada_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		tag = GBR
-		has_dlc = "Rule Britannia"
+		#
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
-	eng_rb_canada = {
-		icon = mission_rb_colonise_canada
-		required_missions = { english_colony_in_north_america }
+	english_hudson_discover = {                #EMP+ was eng_rb_canada
+		icon = mission_establish_high_seas_navy
+		required_missions = { eng_newfoundland_colony }
 		completed_by = 1613.1.1
 		position = 7
 
 		provinces_to_highlight = {
-			colonial_region = colonial_canada
+			area = hudson_bay_area
+			has_discovered = ROOT
+		}
+
+		trigger = {
+			NOT = {
+				OR = {
+					current_age = age_of_discovery
+					current_age = age_of_reformation
+				}
+			}
+			has_idea_group = exploration_ideas
+			has_idea = quest_for_the_new_world
+			if = {
+				limit = {
+					is_random_new_world = yes
+				}
+				any_owned_province = {
+					continent = new_world
+				}
+			}
+			else = {
+				hudson_bay_area = { has_discovered = ROOT }
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "the_unknown_frontier"
+				duration = 5475
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						1005 = { owner = { NOT = { OR = { technology_group = western technology_group = eastern technology_group = ottoman } } is_colonial_nation = no } }
+					}
+					1005 = {
+						owner = { save_global_event_target_as = native_move country_event = { id = orion_seize.1 days = 0 } }
+
+						random_empty_neighbor_province = {
+							change_religion = event_target:native_move
+							change_culture = event_target:native_move
+							add_core = event_target:native_move
+							cede_province = event_target:native_move
+						}
+						clear_global_event_target = native_move
+
+						cede_province = 0
+					}
+				}
+			}
+
+			1005 = {
+				if = {
+					limit = { is_empty = yes }
+					change_religion = ROOT
+					change_culture = ROOT
+					add_territorial_core = ROOT
+					cede_province = ROOT
+				}
+			}
+
+			hudson_bay_area = {
+				add_permanent_claim = ROOT
+			}
+			james_bay_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	english_hudson_colony = {
+		icon = mission_rb_colonise_canada
+		required_missions = { english_hudson_discover }
+
+		provinces_to_highlight = {
+			area = hudson_bay_area
+			area = james_bay_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 
-		ai_priority = {
-			factor = 2
-		}
-
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = miss_discover_canada
-				colonial_canada = {
-					has_discovered = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = miss_colonize_canada
+				tooltip = empplus_miss_english_hudson_colony
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 1
-					colonial_region = colonial_canada
+					value = 5
+					OR = {
+						area = hudson_bay_area
+						area = james_bay_area
+					}
 					is_city = yes
 				}
 			}
@@ -538,8 +608,22 @@ gbr_rb_canada_group = {
 				name = "eng_rb_established_shipping"
 				duration = 7300
 			}
-		}
 
+			add_country_modifier = {
+				name = "the_unknown_frontier"
+				duration = 5475
+			}
+
+			upper_ontario_area = {
+				add_permanent_claim = ROOT
+			}
+			lower_canada_area = {
+				add_permanent_claim = ROOT
+			}
+			upper_canada_area = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 }
 
@@ -548,11 +632,11 @@ eng_rb_trade_value_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		tag = GBR
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -588,14 +672,14 @@ eng_rb_buildings_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -786,14 +870,14 @@ eng_rb_conquest_europe = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -968,11 +1052,11 @@ gbr_rb_empire_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		tag = GBR
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1056,14 +1140,14 @@ gbr_rb_spice_islands_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1136,11 +1220,11 @@ gbr_rb_indian_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		tag = GBR
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1327,11 +1411,11 @@ gbr_rb_india_princes = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		tag = GBR
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1423,14 +1507,14 @@ gbr_rb_northern_colonial = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = GBR
 			tag = ENG
 		}
-		## has_dlc = "Rule Britannia"
+		#
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1523,7 +1607,7 @@ eng_rb_thirteen_colonies_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
@@ -1531,7 +1615,7 @@ eng_rb_thirteen_colonies_group = {
 			tag = GBR
 		}
 		is_random_new_world = no
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1570,14 +1654,14 @@ eng_rb_trade_in_home_cot_group = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Rule Britannia"
+		#
 	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		has_dlc = "Rule Britannia"
+		#
 		NOT = { map_setup = map_setup_random }
 	}
 	eng_establish_trade_in_home_cot_gb = {

@@ -800,54 +800,6 @@ eng_exploration_americas = {
 
 eng_chesapeake_dominance = {
 
-	slot = 2
-	ai = yes
-
-	potential = {
-		OR = {
-			tag = ENG
-			tag = GBR
-		}
-		is_random_new_world = no
-		NOT = {
-			has_dlc = "Rule Britannia"
-		}
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-
-	establish_trade_in_american_cot = {
-		icon = mission_dominate_home_trade_node
-		required_missions = { english_colony_in_north_america }
-		position = 7
-		completed_by = 1618.5.1
-
-		provinces_to_highlight = {
-			province_id = 1500
-			has_discovered = ROOT
-		}
-
-		trigger = {
-			1500 = {	# Chesapeake Bay
-				is_strongest_trade_power = ROOT
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "eng_chesapeake_dominance"
-				duration = 7300
-			}
-			if = {
-				limit = {
-					has_dlc = "Rule Britannia"
-				}
-				226 = {
-					add_permanent_claim = ROOT
-				}
-			}
-		}
-	}
 
 }
 

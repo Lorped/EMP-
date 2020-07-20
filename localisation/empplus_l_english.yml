@@ -17,3 +17,26 @@
   eng_newfoundland_colony_title:0 "Colonize Newfoundland"
   eng_newfoundland_colony_desc:0 "The island of Newfoundland will be a solid base for our fishermen and for exploring the northern lands."
   empplus_miss_eng_newfoundland_colony:0 "§Y[Root.GetName]§! or their subjects own at least one fully colonized provinces in the Newfoundland area."
+
+  english_hudson_discover_title:0 "Discover the Hudson Bay"
+  english_hudson_discover_desc:0 "Looking for the Northwest Passage, we must study the geography of this mysterious continent."
+
+  english_hudson_colony_title:0 "Colonize the Hudson Bay"
+  english_hudson_colony_desc:0 "This huge bay can have substantial commercial implications, if we establish some trade points with the natives."
+  empplus_miss_english_hudson_colony:0 "§Y[Root.GetName]§! or their subjects own at least five fully colonized provinces in the Hudon Bay or James Bay areas."
+
+  empplus_miss_fra_french_colony:0 "§Y[Root.GetName]§! or their subjects own at least four fully colonized provinces in the Upper or Lower Acadia areas."
+  france_discovers_caribbean_title:0 "Exploit the Caribbean"
+  france_discovers_caribbean_desc:0 "The Caribbean islands are a source of wealth for our rivals, we too must establish commercial bases and make our explorations profitable."
+
+  emp_fra_expand_in_canada_title:0 "Control the St. Lawrence"
+  emp_fra_expand_in_canada_desc:0 "The St. Lawrence river is an important communication and trade route, and its control is essential for the control of the whole of North America"
+  empplus_miss_emp_fra_expand_in_canada:0 "§Y[Root.GetName]§! or their subjects own at least four fully colonized provinces in the Lower Canada or Notre-Dame areas."
+
+  conquer_haiti_title:0 "Conquer Haiti"
+  conquer_haiti_desc:0 "Conquer Haiti"
+
+  empplus_power_to_france_trigger_tooltip:0 "No country:\n   §YCapital§! is on the continent §YEurope§!.\n   Is a Great Power.\n   Is NOT allied with §Y[Root.GetName]§!.\n   Has NOT been defeated by §Y[Root.GetName]§! in war in the past 100 years."
+
+  empplus_fra_france_india_title:0 "Colonial Expansion"
+  empplus_fra_france_india_desc:0 "The glory of France demands that we are the greatest nation in Christendom. Our explorers are seeking royal patronage to go voyages of discovery in the East."
