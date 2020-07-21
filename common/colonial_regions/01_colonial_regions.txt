@@ -1,0 +1,70 @@
+# Guyana
+colonial_guyana = {
+	color = { 255 255 0 }
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+
+	trade_goods = {
+		gold = 3
+		fish = 3
+		naval_supplies = 2
+		grain = 2
+		tobacco = 8
+		cotton = 2
+		sugar = 10
+	}
+
+	religion = {
+		animism = 10
+	}
+
+	provinces = {
+		743 744 2803 745 746 2937
+	}
+
+	#Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = GBR
+				tag = USA
+			}
+		}
+		name = "COLONIAL_GUYANA_Guyana" # Guyana
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_GUYANA_Guiana" # Guiana
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = BNL
+				tag = NED
+				tag = BEL
+				tag = HOL
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_GUYANA_Suriname" # Suriname
+	}
+
+	# Generic
+	names = {
+		name = "COLONIAL_GUYANA_Guyana"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}

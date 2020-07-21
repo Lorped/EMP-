@@ -5,7 +5,7 @@
    nomercs.1.a:0 "So long, and thanks for all the fish"
    nomercs.1.b:0 "No, we will need them in a near future"
 
-  #tooltip
+  # missions & tooltip
   empplus_miss_colonize_eastern_america:0 "§Y[Root.GetName]§! or their subjects own at least three fully colonized provinces in the Chesapeake or Maryland areas."
   english_virginia_colony_title:0 "Colonize Virginia"
   english_virginia_colony_desc:0 "Virginia lands are fertile and hospitable. Too bad for the presence of the natives."
@@ -40,3 +40,10 @@
 
   empplus_fra_france_india_title:0 "Colonial Expansion"
   empplus_fra_france_india_desc:0 "The glory of France demands that we are the greatest nation in Christendom. Our explorers are seeking royal patronage to go voyages of discovery in the East."
+
+  # Other
+  COLONIAL_GUYANA:0 "Colonial Guyana"
+  COLONIAL_GUYANA_Guyana:0 "[Root.GetAdjective] Guyana"
+  COLONIAL_GUYANA_Guiana:0 "[Root.GetAdjective] Guiana"
+  COLONIAL_GUYANA_Suriname:0 "Suriname"
+  trade_company_lesserantilles:0 "Lesser Antilles Charter"
