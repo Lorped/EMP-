@@ -2,8 +2,8 @@ trade_company_lesserantilles = {
 	color = { 253 188 180 }
 
 	provinces = {
-    502 500 501 499 498 497 496 495 494 1881 493 491        #Lesser Antilles
-    502                                                     #Trinidad & tobago
+    500 501 499 498 497 496 495 494 1881 493 491        #Lesser Antilles
+    502                                                 #Trinidad & tobago
     ## 492 PortoRico
     ## 487 jamaica
     ## 482 bahamas

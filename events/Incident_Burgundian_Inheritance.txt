@@ -32,14 +32,14 @@ country_event = {
 				dynasty = "de Bourgogne"
 				ruler_age = 43
 				NOT = {
-					heir_age = 15
+					heir_age = 20
 				}
 			}
 		}
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 60
 
 		modifier = {
 			factor = 0.5
@@ -937,6 +937,8 @@ country_event = {
 			every_owned_province = {
 				limit = {
 					region = france_region
+					NOT = {	province_id = 193  }    #Franche-Comté
+					NOT = {	province_id = 4764 }    #Salines
 				}
 				set_province_flag = bur_succession_province
 			}
@@ -1157,7 +1159,7 @@ country_event = {
 		name = "incidents_bur_inheritance.3.a"
 		custom_tooltip = demand_lowlands_tt
 		ai_chance = {
-			factor = 50
+			factor = 90
 		}
 		hidden_effect = {
 			BUR = {
@@ -1249,7 +1251,7 @@ country_event = {
 	option = { #Cede the lowlands
 		name = "incidents_bur_inheritance.301.b"
 		ai_chance = {
-			factor = 10
+			factor = 90
 			modifier = {
 				factor = 10
 				NOT = {
@@ -1292,7 +1294,11 @@ country_event = {
 				else_if = {
 					limit = {
 						owned_by = BUR
-						NOT = { region = france_region }
+						OR = {
+							NOT = { region = france_region }
+							province_id = 193  #Franche-Comté
+							province_id = 4764 #Salines
+						}
 					}
 					cede_province = emperor
 					add_core = emperor
@@ -1300,6 +1306,8 @@ country_event = {
 				else_if = {
 					limit = {
 						region = france_region
+						NOT = { province_id = 193  } #Franche-Comté
+						NOT = { province_id = 4764 } #Salines
 					}
 					set_in_empire = no
 				}
@@ -1309,7 +1317,7 @@ country_event = {
 	option = { #Fight for the Lowlands
 		name = "incidents_bur_inheritance.301.a"
 		ai_chance = {
-			factor = 10
+			factor = 1
 			modifier = {
 				factor = 1.5
 				army_strength = {
@@ -1458,7 +1466,7 @@ country_event = {
 	option = { #Let it go
 		name = "incidents_bur_inheritance.101.b"
 		ai_chance = {
-			factor = 100
+			factor = 10
 			modifier = {
 				factor = 0
 				army_strength = {

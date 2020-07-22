@@ -23,7 +23,7 @@ colonial_guyana = {
 	}
 
 	provinces = {
-		743 744 2803 745 746 2937
+		743 744 2803 745 746 2937 2931 2804
 	}
 
 	#Specific
@@ -49,9 +49,7 @@ colonial_guyana = {
 	names = {
 		trigger = {
 			OR = {
-				tag = BNL
 				tag = NED
-				tag = BEL
 				tag = HOL
 				primary_culture = dutch
 				primary_culture = flemish
