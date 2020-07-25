@@ -518,7 +518,7 @@ eng_exploration_americas = {
 						950 = { owner = { NOT = { OR = { technology_group = western technology_group = eastern technology_group = ottoman } } is_colonial_nation = no } }
 					}
 					950 = {
-						owner = { save_global_event_target_as = native_move country_event = { id = orion_seize.1 days = 0 } }
+						owner = { save_global_event_target_as = native_move }
 
 						random_empty_neighbor_province = {
 							change_religion = event_target:native_move
@@ -528,7 +528,6 @@ eng_exploration_americas = {
 						}
 						clear_global_event_target = native_move
 
-						cede_province = 0
 					}
 				}
 
@@ -537,7 +536,7 @@ eng_exploration_americas = {
 						481 = { owner = { NOT = { OR = { technology_group = western technology_group = eastern technology_group = ottoman } } is_colonial_nation = no } }
 					}
 					481 = {
-						owner = { save_global_event_target_as = native_move country_event = { id = orion_seize.1 days = 0 } }
+						owner = { save_global_event_target_as = native_move }
 
 						random_empty_neighbor_province = {
 							change_religion = event_target:native_move
@@ -547,7 +546,6 @@ eng_exploration_americas = {
 						}
 						clear_global_event_target = native_move
 
-						cede_province = 0
 					}
 				}
 			}

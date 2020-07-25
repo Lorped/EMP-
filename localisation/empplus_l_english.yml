@@ -41,6 +41,35 @@
   empplus_fra_france_india_title:0 "Colonial Expansion"
   empplus_fra_france_india_desc:0 "The glory of France demands that we are the greatest nation in Christendom. Our explorers are seeking royal patronage to go voyages of discovery in the East."
 
+  gc_cas_spa_cuba_colony_title:0 "Colonize Isla Juana"
+  gc_cas_spa_cuba_colony_desc:0 "Colonize Isla Juana"
+
+  gc_cas_spa_aztecs_2_title:0 "Continue the Conquest"
+  gc_cas_spa_aztecs_2_desc:0 "These heatens must be converted or purified. The Spanish Crown will lead them to conversion and will take their gold as a sign of devotion."
+
+  gc_cas_spa_spanish_panama_title:0 "The Panama Region"
+  gc_cas_spa_spanish_panama_desc:0 "This thin strip of land leads to a new large ocean. By extending our domains we will be able to look out onto this new sea."
+
+  gc_cas_spa_col_florida_title:0 "Colonize Florida"
+  gc_cas_spa_col_florida_desc:0 "The swampy lands of Florida to the north of New Spain are not rich in gold, but they may prove vital to the future defence of our colonial order."
+
+  gc_cas_spa_baja_california_title:0 "Colonize Baja California"
+  gc_cas_spa_baja_california_desc:0 "We discovered that California is not an island but actually a peninsula. We should settle this land to gain access to the rest of California where virgin gold desposits could exist, ready to be taken."
+
+  gc_cas_spa_texas_title:0 "Colonize Texas"
+  gc_cas_spa_texas_desc:0 "Colonizing the Rio Grande area, we can build a good buffer zone to protect the New Spain from the aggression of other European Powers."
+
+  gc_cas_spa_oregon_title:0 "Colonize Oregon"
+  gc_cas_spa_oregon_desc:0 "Following the Pacific coast, new territories open up. These too must be integrated into the great Spanish empire."
+
+  cas_spa_unrest.tooltip:0 "All provinces in the §YMexico Area§! lose §G2.00§! unrest."
+
+  gc_cas_spa_columbia_title:0 "Colonize Columbia"
+  gc_cas_spa_columbia_desc:0 "This seems the last safe land before a wilderness. We must settle here to protect our southern lands."
+
+  gc_cas_spa_alaska_title:0 "Control Pacifico Norte"
+  gc_cas_spa_alaska_desc:0 "Alaska is the last strip of the earth that will serve to consolidate our presence in the Pacific."
+
   # Other
   COLONIAL_GUYANA:0 "Colonial Guyana"
   COLONIAL_GUYANA_Guyana:0 "[Root.GetAdjective] Guyana"

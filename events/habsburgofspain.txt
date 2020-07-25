@@ -1,0 +1,249 @@
+namespace = habsburgofspain
+
+#A Habsburg Heir in Spain
+country_event = {
+	id = habsburgofspain.1
+	title = flavor_spa.13.t
+	desc = flavor_spa.13.d
+	picture = NEW_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = SPA
+			AND = {
+				tag = CAS
+				NOT = {
+					exists = SPA
+				}
+        senior_union_with = ARA    #Hiberian Wedding has fired
+			}
+		}
+    exists = HAB
+		is_year = 1478
+
+		has_heir = no
+		is_lesser_in_union = no
+		#marriage_with = HAB
+		HAB = {
+			dynasty = "von Habsburg"
+      is_lesser_in_union = no
+		}
+		NOT = {
+			dynasty = HAB
+		}
+
+		NOT = {
+			OR = {
+				is_rival = HAB
+				war_with = HAB
+				HAB = {
+					is_rival = SPA
+				}
+				AND = {
+					HAB = {
+						is_rival = CAS
+					}
+					NOT = {
+						exists = SPA
+					}
+				}
+			}
+		}
+		NOT = {
+			dynasty = FRA
+		}
+		ruler_age = 16
+		has_government_attribute = heir
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = flavor_spa.13.a
+		define_heir = {
+			claim = 100
+			dynasty = "von Habsburg"
+		}
+		if = {
+			limit = {
+				NOT = {
+					marriage_with = HAB
+				}
+			}
+			create_marriage = HAB
+		}
+		hidden_effect = {
+			HAB = {
+				country_event = { id = flavor_spa.14 }
+			}
+		}
+	}
+}
+
+
+
+
+#The Low Countries Pass to Spain
+country_event = {
+	id = habsburgofspain.2
+	title = flavor_spa.15.t
+	desc = flavor_spa.15.d
+	picture = NEW_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+
+		OR = {
+			tag = SPA
+			AND = {
+				tag = CAS
+				NOT = {
+					exists = SPA
+				}
+			}
+		}
+
+		is_lesser_in_union = no
+
+		is_at_war = no
+		HAB = {
+			is_at_war = no
+		}
+
+		OR = {
+			marriage_with = HAB
+			dynasty = HAB
+		}
+
+		HAB = {
+			OR = {
+				any_subject_country = {
+					any_owned_province = {
+						OR = {
+							region = low_countries_region
+							area = picardy_area
+						}
+					}
+				}
+				any_owned_province = {
+					OR = {
+						region = low_countries_region
+						area = picardy_area
+					}
+				}
+			}
+		}
+
+		ruler_age = 16
+
+		OR = {
+			has_heir = no
+			is_year = 1500
+		}
+
+		NOT = { is_rival = HAB }
+		NOT = { war_with = HAB }
+		NOT = {
+			HAB = {
+				is_rival = ROOT
+			}
+		}
+		has_government_attribute = heir
+	}
+
+	mean_time_to_happen = {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			dynasty = HAB
+		}
+		modifier = {
+			factor = 0.5
+			HAB = {
+				dynasty = "von Habsburg"
+			}
+		}
+		modifier = {
+			factor = 0.5
+			marriage_with = HAB
+		}
+		modifier = {
+			factor = 0.5
+			HAB = {
+				OR = {
+					any_subject_country = {
+						num_of_owned_provinces_with = {
+							OR = {
+								region = low_countries_region
+								area = picardy_area
+							}
+							value = 5
+						}
+					}
+					num_of_owned_provinces_with = {
+						OR = {
+							region = low_countries_region
+							area = picardy_area
+						}
+						value = 5
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavor_spa.15.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				has_heir = no
+			}
+			define_heir = {
+				claim = 100
+				dynasty = "von Habsburg"
+				age = 15
+			}
+		}
+
+		custom_tooltip = flavor_spa.15.tt
+		hidden_effect = {
+			HAB = {
+				country_event = { id = flavor_spa.14 }
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = low_countries_region
+							area = picardy_area
+						}
+					}
+					add_core = ROOT
+					remove_core = HAB
+					cede_province = ROOT
+				}
+				every_subject_country = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								region = low_countries_region
+								area = picardy_area
+							}
+						}
+						add_core = ROOT
+						remove_core = HAB
+						cede_province = ROOT
+					}
+				}
+			}
+		}
+	}
+
+}

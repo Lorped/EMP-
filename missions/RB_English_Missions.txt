@@ -4,15 +4,12 @@ eng_british_naval_conq = {
 	generic = no
 	ai = yes
 
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -58,15 +55,12 @@ eng_rb_gibraltar = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -124,9 +118,7 @@ eng_rb_islands_med = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
@@ -222,15 +214,12 @@ eng_rb_egypt = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -316,15 +305,12 @@ eng_rb_stability = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -408,15 +394,12 @@ eng_rb_burgundy = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -489,12 +472,9 @@ gbr_rb_canada_group = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		tag = GBR
-		#
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 	}
@@ -544,7 +524,7 @@ gbr_rb_canada_group = {
 						1005 = { owner = { NOT = { OR = { technology_group = western technology_group = eastern technology_group = ottoman } } is_colonial_nation = no } }
 					}
 					1005 = {
-						owner = { save_global_event_target_as = native_move country_event = { id = orion_seize.1 days = 0 } }
+						owner = { save_global_event_target_as = native_move }
 
 						random_empty_neighbor_province = {
 							change_religion = event_target:native_move
@@ -554,7 +534,6 @@ gbr_rb_canada_group = {
 						}
 						clear_global_event_target = native_move
 
-						cede_province = 0
 					}
 				}
 			}
@@ -631,12 +610,9 @@ eng_rb_trade_value_group = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		tag = GBR
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -671,15 +647,12 @@ eng_rb_buildings_group = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -869,15 +842,12 @@ eng_rb_conquest_europe = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -964,7 +934,6 @@ eng_rb_conquest_europe = {
 				add_permanent_claim = ROOT
 			}
 		}
-
 	}
 
 	eng_rb_angevin = {
@@ -1051,12 +1020,9 @@ gbr_rb_empire_group = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		tag = GBR
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1139,15 +1105,12 @@ gbr_rb_spice_islands_group = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1219,12 +1182,9 @@ gbr_rb_indian_group = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		tag = GBR
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1410,12 +1370,9 @@ gbr_rb_india_princes = {
 	slot = 5
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		tag = GBR
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1506,15 +1463,12 @@ gbr_rb_northern_colonial = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = GBR
 			tag = ENG
 		}
-		#
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1606,16 +1560,13 @@ eng_rb_thirteen_colonies_group = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
 		is_random_new_world = no
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1653,15 +1604,12 @@ eng_rb_trade_in_home_cot_group = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		#
-	}
+	potential_on_load = {	}
 	potential = {
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		#
 		NOT = { map_setup = map_setup_random }
 	}
 	eng_establish_trade_in_home_cot_gb = {
