@@ -1,0 +1,7 @@
+spanish_main = {
+	colonist_placement_chance = 0.10
+	global_colonial_growth = 25
+}
+spa_colonies_united = {
+	administrative_efficiency = 0.1
+}

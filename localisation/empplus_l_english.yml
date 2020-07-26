@@ -42,7 +42,7 @@
   empplus_fra_france_india_desc:0 "The glory of France demands that we are the greatest nation in Christendom. Our explorers are seeking royal patronage to go voyages of discovery in the East."
 
   gc_cas_spa_cuba_colony_title:0 "Colonize Isla Juana"
-  gc_cas_spa_cuba_colony_desc:0 "Colonize Isla Juana"
+  gc_cas_spa_cuba_colony_desc:0 "This beautiful island is rich in tobacco and sugar cane. It will become our pearl in the Caribbean."
 
   gc_cas_spa_aztecs_2_title:0 "Continue the Conquest"
   gc_cas_spa_aztecs_2_desc:0 "These heatens must be converted or purified. The Spanish Crown will lead them to conversion and will take their gold as a sign of devotion."
@@ -70,9 +70,24 @@
   gc_cas_spa_alaska_title:0 "Control Pacifico Norte"
   gc_cas_spa_alaska_desc:0 "Alaska is the last strip of the earth that will serve to consolidate our presence in the Pacific."
 
+  gc_cas_spa_spanish_colombia_title:0 "Colonize Colombia"
+  gc_cas_spa_spanish_colombia_title:0 "These territories seem to extend further. Because of this, we are thinking about creating more viceroyalties. We must discover and take this promising land."
+
+  gc_cas_spa_discover_la_plata_title:0 "Discover La Plata"
+  gc_cas_spa_discover_la_plata_desc:0 "It is time to discover the southern shores of this new continent"
+
+  spa_conquer_louisiana_title:0 "Conquer Louisiana"
+  spa_conquer_louisiana_desc:0 "The Mississippi River is a strategic resource for controlling North American trade. We must expand the borders of New Spain to include those territories."
+
+  gc_cas_spa_brazil_title:0 "La Banda Oriental"
+  gc_cas_spa_brazil_desc:0 "The Portuguese claim that the Rio Grande do Sul territories are rightfully theirs. This is obviously false and the whole Banda Oriental belongs to us"
+
   # Other
   COLONIAL_GUYANA:0 "Colonial Guyana"
   COLONIAL_GUYANA_Guyana:0 "[Root.GetAdjective] Guyana"
   COLONIAL_GUYANA_Guiana:0 "[Root.GetAdjective] Guiana"
   COLONIAL_GUYANA_Suriname:0 "Suriname"
   trade_company_lesserantilles:0 "Lesser Antilles Charter"
+
+  spanish_main:0 "A new Reconquista"
+  spa_colonies_united:0 "Plus Ultra"
