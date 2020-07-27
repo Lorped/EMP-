@@ -91,3 +91,19 @@
 
   spanish_main:0 "A new Reconquista"
   spa_colonies_united:0 "Plus Ultra"
+
+
+  # AI
+
+  upgradeforts.1.t:0 "Upgrade fort"
+  upgradeforts.1.d:0 "It's time to upgrade your fort"
+  upgradeforts.1.a:0 "Aye aye, Sir!"
+  upgradeforts.2.t:0 "Upgrade fort"
+  upgradeforts.2.d:0 "It's time to upgrade your fort"
+  upgradeforts.2.a:0 "Aye aye, Sir!"
+  upgradeforts.3.t:0 "Upgrade fort"
+  upgradeforts.3.d:0 "It's time to upgrade your fort"
+  upgradeforts.3.a:0 "Aye aye, Sir!"
+  upgradeforts.4.t:0 "Upgrade fort"
+  upgradeforts.4.d:0 "It's time to upgrade your fort"
+  upgradeforts.4.a:0 "Aye aye, Sir!"

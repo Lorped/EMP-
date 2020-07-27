@@ -36,7 +36,7 @@ marketplace = {
 	}
 
 	ai_will_do = {
-		factor = 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 2 #EMP+  was 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 	}
 }
 
@@ -50,7 +50,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 1
+		factor = 15 #EMP+ was 1
 	}
 }
 
@@ -62,7 +62,7 @@ temple = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 15 #EMP+ was 1
 	}
 }
 
@@ -97,7 +97,7 @@ barracks = {
 #	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 5 #EMP+ was 1
 	}
 }
 
@@ -116,11 +116,11 @@ shipyard = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 105 # Little above build cost
+			factor = 10 #EMP+ was 105 # Little above build cost
 			FROM = { navy_size_percentage = 0.95 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 0.5  #EMP+ was 1.1
 			local_autonomy = 50
 		}
 	}
@@ -177,7 +177,7 @@ coastal_defence = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 0.2 #EMP+ was 0.5
 	}
 }
 
@@ -195,7 +195,7 @@ courthouse = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 5 #EMP+ was 1
 	}
 }
 
@@ -210,7 +210,7 @@ dock = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 0.5  #EMP+   was 1
 		modifier = {
 			factor = 0.5  #EMP+   was 1
 		}
@@ -248,7 +248,7 @@ regimental_camp = {
 #	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 10  #EMP+ was 1
 		modifier = {
 			factor = 215 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
@@ -296,7 +296,7 @@ fort_16th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1.5  #Lots of logic in code instead, that multiplies with this value   #EMP+   was 1
+		factor = 1  #Lots of logic in code instead, that multiplies with this value
 	}
 }
 
@@ -333,7 +333,7 @@ cathedral = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 0.5 #EMP+ was 1
 	}
 }
 
@@ -355,7 +355,7 @@ university = {
 			is_state = yes
 		}
 		modifier = {
-			factor = 0.9
+			factor = 3  #EMP+ was 0.9
 			OR =
 			{
 				has_climate = tropical
@@ -367,14 +367,14 @@ university = {
 			has_climate = arctic
 		}
 		modifier = {
-			factor = 2
+			factor = 5 #EMP+ was 2
 			OR = {
 				has_terrain = grasslands
 				has_terrain = drylands
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 6 #EMP+ was 3
 			has_terrain = farmlands
 		}
 	}
@@ -411,13 +411,13 @@ grand_shipyard = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 0.5  #EMP+ was 1
 		modifier = {
 			factor = 320 # Little above build cost
 			FROM = { navy_size_percentage = 0.95 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 0.5 #EMP+ was 1.1
 			local_autonomy = 50
 		}
 	}
@@ -457,7 +457,7 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 10 #EMP+ was 1
 	}
 }
 
@@ -500,7 +500,7 @@ fort_17th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1.5  #Lots of logic in code instead, that multiplies with this value   #EMP+   was 1
+		factor = 1  #Lots of logic in code instead, that multiplies with this value
 	}
 }
 
@@ -536,7 +536,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 1
+		factor = 0.5 #EMP+ was 1
 	}
 }
 
@@ -556,7 +556,7 @@ town_hall = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 5 #EMP+ was 1
 	}
 }
 
@@ -575,7 +575,7 @@ drydock = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 0.2 #EMP+ WAS 1
 	}
 }
 
@@ -614,7 +614,7 @@ conscription_center = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1o #EMP+ was 1
 		modifier = {
 			factor = 435 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
@@ -694,22 +694,22 @@ wharf = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1750
+		factor = 1000 #EMP+ was 1750
 
 		modifier = {
-			factor = 0.4
+			factor = 20 #EMP+ was 0.4
 			NOT = { base_production = 6 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 25 #EMP+ was 1.5
 			base_production = 10
 		}
 		modifier = {
-			factor = 1.5
+			factor = 30 #EMP+ was 1.5
 			base_production = 15
 		}
 		modifier = {
-			factor = 5
+			factor = 35 #EMP+ was 5
 			OR = {
 				has_province_modifier = skanemarket
 				has_province_modifier = comet_ore_modifier
@@ -748,7 +748,7 @@ weapons = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 25 #EMP+ was 1
 	}
 
 	keep_trigger = {                   #EMP+
@@ -778,7 +778,7 @@ textile = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 30 #EMP+ was 1
 	}
 
 	keep_trigger = {                   #EMP+
@@ -813,7 +813,7 @@ plantations = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 30 #EMP+ was 1
 	}
 
 	keep_trigger = {                   #EMP+
@@ -848,7 +848,7 @@ tradecompany = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 30 #EMP+ was
 	}
 
 	keep_trigger = {                   #EMP+
@@ -880,7 +880,7 @@ farm_estate = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 25 #EMP+ was 1
 	}
 
 	keep_trigger = {                   #EMP+
@@ -913,7 +913,7 @@ mills = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 30 #EMP+ was 1
 	}
 
 	keep_trigger = {                   #EMP+
@@ -953,7 +953,7 @@ furnace = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 1
+		factor = 100 #EMP+ was 1
 	}
 }
 
@@ -1082,6 +1082,6 @@ state_house = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 1
+		factor = 25 #EMP+ was 1
 	}
 }

@@ -1,0 +1,278 @@
+namespace = upgradeforts
+
+##  LVL 2 -> LVL 3
+country_event = {
+	id = upgradeforts.1
+	title = "upgradeforts.1.t"
+	desc = "upgradeforts.1.d"
+	picture = FORT_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		mil_tech = 14
+		treasury = 200
+		NOT = {
+			num_of_loans = 1
+		}
+		calc_true_if = {
+			all_owned_province = {
+				has_building = fort_15th
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_building = fort_15th
+				}
+				remove_building = fort_15th
+				add_building = fort_16th
+			}
+			add_treasury = -200
+		}
+	}
+
+	option = {
+		name = "upgradeforts.1.a"
+	}
+}
+
+##  LVL 3 -> LVL 4
+country_event = {
+	id = upgradeforts.2
+	title = "upgradeforts.2.t"
+	desc = "upgradeforts.2.d"
+	picture = FORT_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		mil_tech = 19
+		treasury = 200
+		NOT = {
+			num_of_loans = 1
+		}
+		calc_true_if = {
+			all_owned_province = {
+				has_building = fort_16th
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_building = fort_16th
+				}
+				remove_building = fort_16th
+				add_building = fort_17th
+			}
+			add_treasury = -200
+		}
+	}
+
+	option = {
+		name = "upgradeforts.2.a"
+	}
+}
+
+##  LVL 4 -> LVL 5
+country_event = {
+	id = upgradeforts.3
+	title = "upgradeforts.3.t"
+	desc = "upgradeforts.3.d"
+	picture = FORT_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		mil_tech = 24
+		treasury = 200
+		NOT = {
+			num_of_loans = 1
+		}
+		calc_true_if = {
+			all_owned_province = {
+				has_building = fort_17th
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_building = fort_17th
+				}
+				remove_building = fort_17th
+				add_building = fort_18th
+			}
+			add_treasury = -200
+		}
+	}
+
+	option = {
+		name = "upgradeforts.3.a"
+	}
+}
+
+## Build fort in your own capital
+country_event = {
+	id = upgradeforts.4
+	title = "upgradeforts.4.t"
+	desc = "upgradeforts.4.d"
+	picture = FORT_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		treasury = 200
+		NOT = {
+			num_of_loans = 1
+		}
+		calc_true_if = {
+			capital_scope = {
+				OR = {
+					NOT = {
+						has_building = fort_15th
+					}
+					AND = {
+						ROOT = {
+							AND = {
+								mil_tech = 14
+								NOT = {
+									mil_tech = 19
+								}
+							}
+						}
+						NOT = {
+							has_building = fort_16th
+						}
+					}
+					AND = {
+						ROOT = {
+							AND = {
+								mil_tech = 19
+								NOT = {
+									mil_tech = 24
+								}
+							}
+						}
+						NOT = {
+							has_building = fort_17th
+						}
+					}
+					AND = {
+						ROOT = {
+							mil_tech = 24
+						}
+						NOT = {
+							has_building = fort_18th
+						}
+					}
+				}
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						ROOT = {
+							NOT = {
+								mil_tech = 14
+							}
+						}
+						NOT = {
+							has_building = fort_15th
+						}
+					}
+					add_building = fort_15th
+				}
+
+				if = {
+					limit = {
+						ROOT = {
+							AND = {
+								mil_tech = 14
+								NOT = {
+									mil_tech = 19
+								}
+							}
+						}
+						NOT = {
+							has_building = fort_16th
+						}
+					}
+					remove_building = fort_15th
+					add_building = fort_16th
+				}
+
+				if = {
+					limit = {
+						ROOT = {
+							AND = {
+								mil_tech = 19
+								NOT = {
+									mil_tech = 24
+								}
+							}
+						}
+						NOT = {
+							has_building = fort_17th
+						}
+					}
+					remove_building = fort_15th
+					remove_building = fort_16th
+					add_building = fort_17th
+				}
+
+				if = {
+					limit = {
+						ROOT = {
+							mil_tech = 24
+						}
+						NOT = {
+							has_building = fort_18th
+						}
+					}
+					remove_building = fort_15th
+					remove_building = fort_16th
+					remove_building = fort_17th
+					add_building = fort_18th
+				}
+			}
+			add_treasury = -200
+		}
+	}
+
+	option = {
+		name = "upgradeforts.4.a"
+	}
+}
