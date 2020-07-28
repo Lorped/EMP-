@@ -615,7 +615,7 @@ eng_exploration_americas = {
 			custom_trigger_tooltip = {
 				tooltip = empplus_miss_colonize_eastern_america
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 3
+					value = 5
 					OR = {
 						area = chesapeake_area
 						area = maryland_area
@@ -623,6 +623,10 @@ eng_exploration_americas = {
 					is_city = yes
 				}
 			}
+		}
+
+		ai_priority = {
+			factor = 400
 		}
 
 		effect = {
@@ -700,37 +704,16 @@ eng_exploration_americas = {
 				}
 			}
 		}
+		ai_priority = {
+			factor = 400
+		}
 
 		effect = {
 			add_country_modifier = {
 				name = "eng_caribbean_trade"
 				duration = 5475
 			}
-			hidden_effect = {
-				every_province = {
-					limit = {
-						OR = {
-							area = chesapeake_area
-							area = great_valley_area
-						}
-					}
-					if = {
-						limit = { is_empty = yes }
-						add_territorial_core = ROOT
-						cede_province = ROOT
-						change_religion = ROOT
-						change_culture = ROOT
-					}
-					else_if = {
-						limit = { is_colony = yes country_or_non_sovereign_subject_holds = ROOT  }
-						add_colonysize = 999
-					}
-					else_if = {
-						limit = { is_city = yes NOT = { country_or_non_sovereign_subject_holds = ROOT } }
-						add_claim = ROOT
-					}
-				}
-			}
+
 			delaware_valley_area = {
 				add_permanent_claim = ROOT
 			}
@@ -766,7 +749,7 @@ eng_exploration_americas = {
 			custom_trigger_tooltip = {
 				tooltip = empplus_miss_english_new_england_colony
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 6
+					value = 12
 					OR = {
 						area = delaware_valley_area
 						area = hudson_valley_area
@@ -777,6 +760,11 @@ eng_exploration_americas = {
 				}
 			}
 		}
+
+		ai_priority = {
+      factor = 400
+    }
+
 
 		effect = {
 			add_country_modifier = {

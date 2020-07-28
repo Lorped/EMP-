@@ -1,0 +1,31 @@
+namespace = misc
+
+country_event = {
+  id = misc.1
+  title = "misc.1.t"
+	desc = "misc.1.d"
+	picture = FORT_eventPicture
+	hidden = yes
+
+  trigger = {
+    ai = yes
+    year = 1466
+    tag = CAS
+    4565 = {
+      is_empty = yes
+    }
+  }
+
+  immediate = {
+		hidden_effect = {
+			4565 = {
+        create_colony = 200
+      }
+		}
+	}
+
+  option = {
+    name = "misc.1.a"
+  }
+
+}

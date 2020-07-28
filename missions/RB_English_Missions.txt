@@ -513,6 +513,11 @@ gbr_rb_canada_group = {
 			}
 		}
 
+		ai_priority = {
+      factor = 400
+    }
+
+
 		effect = {
 			add_country_modifier = {
 				name = "the_unknown_frontier"
@@ -580,6 +585,10 @@ gbr_rb_canada_group = {
 					is_city = yes
 				}
 			}
+		}
+
+		ai_priority = {
+			factor = 400
 		}
 
 		effect = {

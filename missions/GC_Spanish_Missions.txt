@@ -265,6 +265,10 @@ gc_spain_1_c = {
 			}
 		}
 
+		ai_priority = {
+			factor = 1000
+		}
+
 		effect = {
 			add_prestige = 15
 			add_country_modifier = {
