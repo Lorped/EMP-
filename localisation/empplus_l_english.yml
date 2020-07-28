@@ -36,6 +36,7 @@
   conquer_haiti_title:0 "Conquer Haiti"
   conquer_haiti_desc:0 "Conquer Haiti"
 
+
   empplus_power_to_france_trigger_tooltip:0 "No country:\n   §YCapital§! is on the continent §YEurope§!.\n   Is a Great Power.\n   Is NOT allied with §Y[Root.GetName]§!.\n   Has NOT been defeated by §Y[Root.GetName]§! in war in the past 100 years."
 
   empplus_fra_france_india_title:0 "Colonial Expansion"
@@ -81,6 +82,9 @@
 
   gc_cas_spa_brazil_title:0 "La Banda Oriental"
   gc_cas_spa_brazil_desc:0 "The Portuguese claim that the Rio Grande do Sul territories are rightfully theirs. This is obviously false and the whole Banda Oriental belongs to us"
+
+  gc_por_brazil_title:0 "Colonize Brazil"
+  gc_por_brazil_desc:0 "The rumors on this earth are true. Indian territories full of gold and exotic resources. And all this is claimed by the king of Portugal."
 
   # Other
   COLONIAL_GUYANA:0 "Colonial Guyana"

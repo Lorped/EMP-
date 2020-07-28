@@ -4,10 +4,6 @@ emp_france_missions_1 = {
 	ai = yes
 	has_country_shield = yes
 
-	potential_on_load = {
-		has_dlc = "Emperor"
-	}
-
 	potential = {
 		tag = FRA
 		NOT = { map_setup = map_setup_random }

@@ -30,16 +30,16 @@ country_event = {
 			AND = {
 				has_ruler = "Charles"
 				dynasty = "de Bourgogne"
-				ruler_age = 43
+				ruler_age = 40
 				NOT = {
-					heir_age = 20
+					heir_age = 30
 				}
 			}
 		}
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 12
 
 		modifier = {
 			factor = 0.5

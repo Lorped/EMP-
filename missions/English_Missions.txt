@@ -796,10 +796,6 @@ eng_exploration_americas = {
 }
 
 
-eng_chesapeake_dominance = {
-
-
-}
 
 eng_indian_ocean_exploration = {
 
