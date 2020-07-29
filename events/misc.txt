@@ -9,17 +9,26 @@ country_event = {
 
   trigger = {
     ai = yes
-    year = 1466
     tag = CAS
+    #has_idea_group = exploration_ideas
+    year = 1460
     4565 = {
       is_empty = yes
     }
   }
 
+  mean_time_to_happen = {
+		months = 1
+	}
+
   immediate = {
 		hidden_effect = {
 			4565 = {
+        discover_country = CAS
+        cede_province = ROOT
         create_colony = 200
+        change_culture = ROOT
+        change_religion = ROOT
       }
 		}
 	}
