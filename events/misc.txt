@@ -11,7 +11,7 @@ country_event = {
     ai = yes
     tag = CAS
     #has_idea_group = exploration_ideas
-    year = 1460
+    is_year = 1460
     4565 = {
       is_empty = yes
     }
