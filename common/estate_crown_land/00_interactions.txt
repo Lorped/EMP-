@@ -495,10 +495,20 @@ interaction = {
 			NOT = {
 				estate_loyalty = {
 					estate = all
-					loyalty = 50
+					loyalty = 45  #EMP+
 				}
 			}
+      NOT = { army_size_percentage = 0.80 }
 		}
+    modifier = {                   #EMP+
+      factor = 0.5
+      estate_loyalty = {
+        estate = all
+        loyalty = 45
+      }
+      army_size_percentage = 0.80
+      is_at_war = no
+    }
 		modifier = {
 			factor = 0.75
 			NOT = { num_of_owned_areas = 2 }

@@ -3237,7 +3237,7 @@ estate_nobles_supremacy_over_crown = {
 		can_give_agendas_without_interaction
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5 #EMP+ was 0   Too juicy not to try.....
 	}
 }
 
