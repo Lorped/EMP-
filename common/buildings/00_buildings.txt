@@ -614,7 +614,7 @@ conscription_center = {
 	}
 
 	ai_will_do = {
-		factor = 1o #EMP+ was 1
+		factor = 10 #EMP+ was 1
 		modifier = {
 			factor = 435 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
@@ -723,18 +723,10 @@ wharf = {
 	}
 
 	keep_trigger = {                   #EMP+
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					trade_goods = naval_supplies
-					trade_goods = fish
-					trade_goods = salt
-				}
-			}
+		OR = {
+			trade_goods = naval_supplies
+			trade_goods = fish
+			trade_goods = salt
 		}
 	}
 
@@ -752,17 +744,9 @@ weapons = {
 	}
 
 	keep_trigger = {                   #EMP+
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					trade_goods = copper
-					trade_goods = iron
-				}
-			}
+		OR = {
+			trade_goods = copper
+			trade_goods = iron
 		}
 	}
 
@@ -782,19 +766,11 @@ textile = {
 	}
 
 	keep_trigger = {                   #EMP+
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					trade_goods = wool
-					trade_goods = cloth
-					trade_goods = silk
-					trade_goods = dyes
-				}
-			}
+		OR = {
+			trade_goods = wool
+			trade_goods = cloth
+			trade_goods = silk
+			trade_goods = dyes
 		}
 	}
 
@@ -817,21 +793,13 @@ plantations = {
 	}
 
 	keep_trigger = {                   #EMP+
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					trade_goods = coffee
-					trade_goods = cotton
-					trade_goods = sugar
-					trade_goods = tobacco
-					trade_goods = tea
-					trade_goods = cocoa
-				}
-			}
+		OR = {
+			trade_goods = coffee
+			trade_goods = cotton
+			trade_goods = sugar
+			trade_goods = tobacco
+			trade_goods = tea
+			trade_goods = cocoa
 		}
 	}
 
@@ -852,20 +820,12 @@ tradecompany = {
 	}
 
 	keep_trigger = {                   #EMP+
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					trade_goods = ivory
-					trade_goods = slaves
-					trade_goods = spices
-					trade_goods = fur
-					trade_goods = incense
-				}
-			}
+		OR = {
+			trade_goods = ivory
+			trade_goods = slaves
+			trade_goods = spices
+			trade_goods = fur
+			trade_goods = incense
 		}
 	}
 
@@ -884,18 +844,10 @@ farm_estate = {
 	}
 
 	keep_trigger = {                   #EMP+
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = wine
-				}
-			}
+		OR = {
+			trade_goods = grain
+			trade_goods = livestock
+			trade_goods = wine
 		}
 	}
 
@@ -917,20 +869,12 @@ mills = {
 	}
 
 	keep_trigger = {                   #EMP+
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					trade_goods = paper
-					trade_goods = gems
-					trade_goods = tropical_wood
-					trade_goods = glass
-					trade_goods = chinaware
-				}
-			}
+		OR = {
+			trade_goods = paper
+			trade_goods = gems
+			trade_goods = tropical_wood
+			trade_goods = glass
+			trade_goods = chinaware
 		}
 	}
 
