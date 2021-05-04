@@ -1,45 +1,45 @@
-namespace = nomercs
-
-country_event = {
-	id = nomercs.1
-	title = "nomercs.1.t"
-	desc = "nomercs.1.d"
-	picture = SCOTTISH_MERCENARIES_eventPicture
-
-	fire_only_once = no
-
-	trigger = {
-    is_at_war = no
-    num_of_hired_mercenary_companies = 1
-    num_of_loans = 1
-		ai = yes
-	}
-
-	mean_time_to_happen = {
-		days = 30
-	}
-
-	immediate = {
-		hidden_effect = {
-			random_hired_mercenary_company = {
-				save_event_target_as = disposable_mercs
-			}
-		}
-	}
-
-	option = {
-		name = "nomercs.1.a"
-		ai_chance = {
-			factor = 100
-		}
-		event_target:disposable_mercs = {
-			disband_mercenary_company = THIS
-		}
-	}
-	option = {
-		name = "nomercs.1.b"
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
+## namespace = nomercs
+## 
+## country_event = {
+## 	id = nomercs.1
+## 	title = "nomercs.1.t"
+## 	desc = "nomercs.1.d"
+## 	picture = SCOTTISH_MERCENARIES_eventPicture
+## 
+## 	fire_only_once = no
+## 
+## 	trigger = {
+##     is_at_war = no
+##     num_of_hired_mercenary_companies = 1
+##     num_of_loans = 1
+## 		ai = yes
+## 	}
+## 
+## 	mean_time_to_happen = {
+## 		days = 30
+## 	}
+## 
+## 	immediate = {
+## 		hidden_effect = {
+## 			random_hired_mercenary_company = {
+## 				save_event_target_as = disposable_mercs
+## 			}
+## 		}
+## 	}
+## 
+## 	option = {
+## 		name = "nomercs.1.a"
+## 		ai_chance = {
+## 			factor = 100
+## 		}
+## 		event_target:disposable_mercs = {
+## 			disband_mercenary_company = THIS
+## 		}
+## 	}
+## 	option = {
+## 		name = "nomercs.1.b"
+## 		ai_chance = {
+## 			factor = 0
+## 		}
+## 	}
+## }

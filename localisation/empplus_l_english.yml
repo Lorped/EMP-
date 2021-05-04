@@ -6,6 +6,9 @@
    nomercs.1.b:0 "No, we will need them in a near future"
 
   # missions & tooltip
+  mehemed_reform:0 "The reforms of Mehmed II"
+  desc_mehemed_reform:0 "The reforms of Mehmed II laid the foundations for the great expansion of the Empire"
+
   empplus_miss_colonize_eastern_america:0 "§Y[Root.GetName]§! or their subjects own at least three fully colonized provinces in the Chesapeake or Maryland areas."
   english_virginia_colony_title:0 "Colonize Virginia"
   english_virginia_colony_desc:0 "Virginia lands are fertile and hospitable. Too bad for the presence of the natives."
