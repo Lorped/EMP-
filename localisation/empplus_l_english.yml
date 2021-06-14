@@ -5,9 +5,15 @@
    nomercs.1.a:0 "So long, and thanks for all the fish"
    nomercs.1.b:0 "No, we will need them in a near future"
 
+
+
   # missions & tooltip
   mehemed_reform:0 "The reforms of Mehmed II"
   desc_mehemed_reform:0 "The reforms of Mehmed II laid the foundations for the great expansion of the Empire"
+  anatolia_eyalet2:0 "Consolidation of the Eyalet of Anatolia"
+  desc_anatolia_eyalet2:0 "By unifying the disparate Beyliks of Anatolia under our rule we have created a strong power base for future expansion into the Caucasus and the Levant."
+
+
 
   empplus_miss_colonize_eastern_america:0 "§Y[Root.GetName]§! or their subjects own at least three fully colonized provinces in the Chesapeake or Maryland areas."
   english_virginia_colony_title:0 "Colonize Virginia"

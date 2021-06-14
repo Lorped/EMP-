@@ -1,0 +1,21 @@
+namespace = ottomisc
+
+country_event = {
+    id = ottomisc.1
+    title = "EVTNAME6304"
+	desc = "EVTDESC6304"
+    picture = MILITARY_CAMP_eventPicture
+
+    fire_only_once = yes
+
+    trigger = {
+        ai = yes
+        tag = TUR
+    }
+
+ 	option = {
+		name = "EVTOPTA6304"
+        add_manpower = 10
+    }
+
+}

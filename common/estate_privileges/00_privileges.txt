@@ -824,7 +824,7 @@ estate_nobles_nobility_primacy = {
 		country_military_power = 1
 	}
 	ai_will_do = {
-		factor = 15       #EMP+ was 10
+		factor = 12
 		modifier = {
 			factor = 0
 			OR = {
@@ -1686,7 +1686,7 @@ estate_burghers_free_enterprise = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 15   #EMP+ was 10
+		factor = 10
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
@@ -2657,8 +2657,8 @@ estate_maratha_levies = {
 		NOT = { religion_group = muslim }
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.25
-		global_manpower_modifier = 1
+		global_tax_modifier = -0.10
+		global_manpower_modifier = 0.25
 	}
 	penalties = {
 	}
@@ -3248,7 +3248,7 @@ estate_brahmins_supremacy_over_crown = {
 	loyalty = 0.1
 	is_valid = {
 		has_dlc = "Emperor"
-		NOT = { religion_group = muslim }
+		NOT = { has_estate = estate_nobles }
 	}
 	penalties = {
 	}
@@ -5938,7 +5938,7 @@ estate_nobles_golden_liberty = {
 	penalties = {
 	}
 	benefits = {
-		global_manpower_modifier = 0.5
+		global_manpower_modifier = 0.33
 	}
 	mechanics = {
 		exempt_from_seize_land

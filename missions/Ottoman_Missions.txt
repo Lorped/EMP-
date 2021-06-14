@@ -15,6 +15,12 @@ tur_conquerors_of_the_near_east = {
 		trigger = {
 			owns = 151
 		}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
 		provinces_to_highlight = {
 			province_id = 151
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -24,18 +30,36 @@ tur_conquerors_of_the_near_east = {
 				name = "defeated_byzantine_empire"
 				duration = 5475
 			}
-			every_province = {
-				limit = {
-					OR = {
-						province_id = 145
-						province_id = 146
-						province_id = 1773
-						province_id = 4701
-						province_id = 4699
-						province_id = 4698
+			if = {
+				limit = { ai = no }
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 145
+							province_id = 146
+							province_id = 1773
+							province_id = 4701
+							province_id = 4699
+							province_id = 4698
+						}
 					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
+			}
+			else = {
+				every_province = {
+					limit = {
+						OR = {
+							province_id = 145
+							province_id = 146
+							province_id = 1773
+							province_id = 4701
+							province_id = 4699
+							province_id = 4698
+						}
+					}
+					add_core = ROOT
+				}
 			}
 		}
 	}
@@ -61,6 +85,12 @@ tur_conquerors_of_the_near_east = {
 			owns = 4701
 			owns = 4699
 			owns = 4698
+		}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
 		}
 		completed_by = 1460.1.1
 		effect = {
@@ -204,7 +234,7 @@ tur_conquerors_of_the_near_east = {
 			factor = 2
 		}
 		ai_priority = {
-			factor = 1
+			factor = 2
 		}
 		completed_by = 1542.1.1
 		provinces_to_highlight = {
@@ -356,74 +386,162 @@ tur_conquest_of_middle_east = {
 		required_missions = {  }
 		completed_by = 1514.8.23
 		ai_weight = {
-			factor = 5
+			factor = 10
 		}
 		ai_priority = {
-			factor = 5
+			factor = 10
 		}
 		trigger = {
-			army_size_percentage = 0.85
+			army_size_percentage = 0.80 #EMP+ was 80
 		}
 		effect = {
 			add_country_modifier = {
-				name = "mehemed_reform"
-				duration = 3650
-			}
-			karaman_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
+				name = "mehmed_reform"
+				duration = 7300
 			}
 			if = {
-				limit = {
-					NOT = { is_core = 2302 }
-					NOT = { owns = 2302 }
+				limit = { ai = no }
+
+				karaman_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = 2302
+				if = {
+					limit = {
+						NOT = { is_core = 2302 }
+						NOT = { owns = 2302 }
+					}
+					add_permanent_claim = 2302
+				}
+				kastamonu_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				rum_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				germiyan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				ankara_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				aydin_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				hudavendigar_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				cukurova_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
-			kastamonu_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+			else = {
+
+				151 = {     ### EMP+ Byz
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
 				}
-				add_permanent_claim = ROOT
-			}
-			rum_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+
+				karaman_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			germiyan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				if = {
+					limit = {
+						NOT = { is_core = 2302 }
+						NOT = { owns = 2302 }
+					}
+					add_core = 2302
 				}
-				add_permanent_claim = ROOT
-			}
-			ankara_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				kastamonu_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			aydin_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				rum_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			hudavendigar_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				germiyan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
 				}
-				add_permanent_claim = ROOT
+				ankara_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+				aydin_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+				hudavendigar_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+				cukurova_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+
 			}
 		}
 	}
@@ -486,39 +604,76 @@ tur_conquest_of_middle_east = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "anatolia_eyalet"
-				duration = 3650
+				name = "anatolia_eyalet2"
+				duration = 7300
 			}
-			north_kurdistan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			dulkadir_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			2305 = {
-				if = {
+			if = {
+				limit = { ai = no }
+				north_kurdistan_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
-			}
-			331 = {
-				if = {
+				dulkadir_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
+				}
+				2305 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				331 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			else = {
+				north_kurdistan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+				dulkadir_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+				2305 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_core = ROOT
+					}
+				}
+				331 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_core = ROOT
+					}
 				}
 			}
 		}
@@ -529,7 +684,7 @@ tur_conquest_of_middle_east = {
 		position = 5
 
 		ai_weight = {
-			factor = 6
+			factor = 2
 		}
 		ai_priority = {
 			factor = 3
@@ -561,49 +716,98 @@ tur_conquest_of_middle_east = {
 			}
 		}
 		effect = {
-			aleppo_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			syria_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			palestine_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			330 = {
-				if = {
+			if = {
+				limit = { ai = no }
+				aleppo_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				syria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				palestine_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				330 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				iraq_arabi_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				al_jazira_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
-			iraq_arabi_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+			else = {
+				aleppo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			al_jazira_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				syria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
 				}
-				add_permanent_claim = ROOT
+				palestine_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+				330 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_core = ROOT
+					}
+				}
+				iraq_arabi_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
+				al_jazira_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_core = ROOT
+				}
 			}
 		}
 	}
@@ -611,6 +815,12 @@ tur_conquest_of_middle_east = {
 		icon = mission_persian_soldiers
 		required_missions = { safeguard_eastern_anatolia }
 		completed_by = 1536.1.1
+		ai_weight = {
+			factor = 6
+		}
+		ai_priority = {
+			factor = 3
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = iraq_arabi_area
@@ -649,6 +859,12 @@ tur_conquest_of_middle_east = {
 		icon = mission_bedouins
 		required_missions = { conquer_mesopotamia }
 		completed_by = 1549.1.1
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = basra_area
@@ -692,6 +908,7 @@ tur_conquest_of_middle_east = {
 }
 
 tur_black_sea = {
+	ai = yes
 	slot = 4
 	potential = {
 		tag = TUR
@@ -769,7 +986,7 @@ tur_eastern_mediterrenean_missions = {
 			factor = 6
 		}
 		ai_priority = {
-			factor = 4
+			factor = 6
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -1006,6 +1223,7 @@ tur_eastern_mediterrenean_missions = {
 
 tur_conquer_western_mediterrenean = {
 	slot = 2
+	ai = yes
 	potential = {
 		tag = TUR
 		NOT = { map_setup = map_setup_random }
@@ -1018,6 +1236,12 @@ tur_conquer_western_mediterrenean = {
 		required_missions = { conquer_egypt }
 		completed_by = 1524.1.1
 		position = 8
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = tripolitania_area
@@ -1056,6 +1280,12 @@ tur_conquer_western_mediterrenean = {
 		icon = mission_cannons_firing
 		required_missions = { conquer_tripolitania }
 		completed_by = 1534.8.16
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = tunisia_area

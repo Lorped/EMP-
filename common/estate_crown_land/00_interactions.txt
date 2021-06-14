@@ -46,35 +46,25 @@ interaction = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { crown_land_share = 20 }
-        NOT = { num_of_subjects = 1 } #EMP+
+				NOT = { crown_land_share = 25 }
+                NOT = { num_of_subjects = 1 } #EMP+
 				AND = {
 					is_absolutism_active = yes
 					NOT = { crown_land_share = 40 }
 				}
 			}
 		}
-    modifier = {
-      factor = 0.5
-      OR = {
-        NOT = { crown_land_share = 25 }
-        NOT = { num_of_subjects = 1 } #EMP+
-        AND = {
-          is_absolutism_active = yes
-          NOT = { crown_land_share = 40 }
+        modifier = {
+            factor = 0.8
+            OR = {
+                NOT = { crown_land_share = 35 }
+                NOT = { num_of_subjects = 1 } #EMP+
+                AND = {
+                  is_absolutism_active = yes
+                  NOT = { crown_land_share = 50 }
+                }
+            }
         }
-      }
-    }
-    modifier = {
-      factor = 0.8
-      OR = {
-        NOT = { crown_land_share = 35 }
-        AND = {
-          is_absolutism_active = yes
-          NOT = { crown_land_share = 50 }
-        }
-      }
-    }
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
@@ -118,7 +108,7 @@ interaction = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			crown_land_share = 80
 		}
 		modifier = {
@@ -302,12 +292,16 @@ interaction = {
 						loyalty = 30
 					}
 				}
-			}
-			spawn_rebels_seize_land_switch = yes
+				estate_influence = {
+					estate = all
+					influence = 0
+                }
+            }
+            spawn_rebels_seize_land_switch = yes
 		}
 	}
 	ai_will_do = {
-		factor = 100 #EMP+  was 25
+		factor = 75 #EMP+  was 25
 		modifier = {
 			factor = 0
 			crown_land_share = 30
@@ -476,39 +470,42 @@ interaction = {
 				}
 			}
 		}
-    modifier = {
-			factor = 0
-			AND = {
-				ROOT = {
-					government = theocracy
-				}
-				NOT = {
-					estate_loyalty = {
-						estate = estate_church
-						loyalty = 60
-					}
-				}
-			}
-		}
 		modifier = {
-			factor = 0 #EMP+ WAS 0.5
+			factor = 0.5
 			NOT = {
 				estate_loyalty = {
 					estate = all
-					loyalty = 45  #EMP+
+					loyalty = 50
 				}
 			}
-      NOT = { army_size_percentage = 0.80 }
 		}
-    modifier = {                   #EMP+
-      factor = 0.5
-      estate_loyalty = {
-        estate = all
-        loyalty = 45
-      }
-      army_size_percentage = 0.80
-      is_at_war = no
-    }
+        modifier = {
+			factor = 0.5
+			NOT = {
+				estate_loyalty = {
+					estate = all
+					loyalty = 40
+				}
+			}
+		}
+        modifier = {
+			factor = 0.5
+			NOT = {
+				estate_loyalty = {
+					estate = all
+					loyalty = 35 # Estate is almost disloyal
+				}
+			}
+		}
+        modifier = {
+			factor = 0
+			NOT = {
+				estate_loyalty = {
+					estate = all
+					loyalty = 30 # Estate is basically disloyal
+				}
+			}
+		}
 		modifier = {
 			factor = 0.75
 			NOT = { num_of_owned_areas = 2 }
